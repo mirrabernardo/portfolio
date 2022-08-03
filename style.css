@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body, button, select, input, textarea {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    margin: 0;
+    background-color: black;
+}
+
+:root {
+    --darkgreen: #014034;
+    --mediumgreen: #02735E;
+    --lightgreen: #038C73;
+    --cleargreen: #36BFB1;
+    --menuheight: 65px;
+}
+
+h1 {
+    font-size: 44px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+
+button {
+    background: var(--cleargreen);
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 35px;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+header {
+    height: calc(100vh - var(--menuheight));
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+        height: fit-content;
+    width: 50%;
+    padding: 0 100px;
+
+}
+
+header .container h1 {
+    color: var(--lightgreen);
+}
+
+header .container button {
+    margin-top: 30px;
+}
+
+nav {
+    display: flex;
+    height: var(--menuheight);
+    justify-content: space-between;
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+nav ul a {
+    font-size: 20px;
+    color: var(--cleargreen);
+    text-decoration: none;
+    margin: 0 35px;
+    
+}
+
+section {
+    height: 1500px;
+    background-color: #014034;
+}
