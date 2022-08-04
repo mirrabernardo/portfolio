@@ -79,6 +79,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: black;
+    z-index: 99;
 }
 
 nav ul button svg {
@@ -117,6 +118,7 @@ nav ul {
 .about .image-container img {
     width: 70%;
     height: 100%;
+    object-fit: cover;
 }
 
 .about .image-container .line {
@@ -143,13 +145,30 @@ nav ul {
         padding: 70px;
     }
 
+    .about {
+        flex-direction: column;
+
+    }
+
+    .about .container, .about .image-container {
+        width: 100%;
+    }
+
+    .about .container {
+        padding-right: 0;
+    }
+
+    .about .image-container {
+        margin-top: 50px;
+    }
+
 }
 
 /* tablet response */
 
 @media (max-width: 767px) {
     
-    header .container {
+    header .container, .about {
         padding: 50px;
     }
 
@@ -206,6 +225,10 @@ nav ul {
     nav ul button svg {
         display: block;
         margin: 0 auto;
+    }
+
+    .about {
+        padding: 40px;
     }
 
 }
