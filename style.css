@@ -44,6 +44,10 @@ button {
 
 }
 
+button:hover {
+    background-color: var(--mediumgreen);
+}
+
 header {
     height: calc(100vh - var(--menuheight));
     display: flex;
@@ -51,10 +55,14 @@ header {
 }
 
 header .container {
-        height: fit-content;
+    height: fit-content;
     width: 50%;
     padding: 0 100px;
 
+}
+
+header .container img {
+    display: none;
 }
 
 header .container h1 {
@@ -75,15 +83,92 @@ nav {
     background-color: black;
 }
 
-nav ul a {
-    font-size: 20px;
-    color: var(--cleargreen);
-    text-decoration: none;
-    margin: 0 35px;
+nav ul button svg {
+    display: none;
+}
+
+nav img {
+    height: 60px;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 100px;
     
 }
 
 section {
     height: 1500px;
     background-color: #014034;
+}
+
+
+@media (max-width: 1000px) {
+    header .container {
+        width: 100%;
+        padding: 70px;
+    }
+
+}
+
+
+/* tablet response */
+@media (max-width: 767px) {
+    
+    header .container {
+        padding: 50px;
+    }
+
+    header .container img {
+        display: inline;
+        height: 70px;
+        margin-bottom: 50px;
+    }
+
+    nav {
+        padding: 0 30px;
+    }
+
+    nav img {
+        display: none;
+    }
+    
+    nav ul {
+        padding: 0;
+        justify-content: space-between;
+        
+    }
+}
+
+/* phone response */
+@media (max-width: 480px) {
+    header .container {
+        padding: 0 40px;
+    }
+
+    nav {
+        padding: 0 20px;
+        height: 75px;
+
+    }
+
+    nav button {
+        height: 50px;
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    nav ul {
+        padding: 0;
+        justify-content: space-around;
+        
+    }
+
+    nav ul button svg {
+        display: block;
+        margin: 0 auto;
+    }
+
 }
