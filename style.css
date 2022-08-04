@@ -25,7 +25,7 @@ html, body {
 }
 
 h1 {
-    font-size: 44px;
+    font-size: 50px;
     margin: 0;
     color: var(--lightgreen);
 }
@@ -34,7 +34,9 @@ h2 {
     font-size: 24px;
 }
 
-
+a {
+    color: var(--cleargreen);
+}
 button {
     background: var(--cleargreen);
     border: 0;
@@ -107,6 +109,13 @@ nav ul {
     width: 50%;
     padding-right: 50px;
 
+}
+
+.about .container .social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30%;
 }
 
 .about .image-container {
