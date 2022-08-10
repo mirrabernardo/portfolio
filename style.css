@@ -2,7 +2,7 @@
 
 body, button, select, input, textarea {
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: var(--dark);
     
 }
 
@@ -13,21 +13,21 @@ body, button, select, input, textarea {
 
 html, body {
     margin: 0;
-    background-color: black;
+    background-color: var(--clear);
 }
 
 :root {
-    --darkgreen: #014034;
+    --dark: #000000;
     --mediumgreen: #02735E;
     --lightgreen: #038C73;
-    --cleargreen: #36BFB1;
+    --clear: #ffffff;
     --menuheight: 65px;
 }
 
 h1 {
     font-size: 50px;
     margin: 0;
-    color: var(--lightgreen);
+    color: var(--mediumgreen);
 }
 
 h2 {
@@ -35,14 +35,14 @@ h2 {
 }
 
 a {
-    color: var(--cleargreen);
+    color: var(--dark);
 }
 button {
-    background: var(--cleargreen);
+    background: var(--dark);
     border: 0;
     border-radius: 20px;
     padding: 10px 35px;
-    color: black;
+    color: white;
     font-weight: bold;
     letter-spacing: 2px;
 
@@ -65,6 +65,10 @@ header .container {
 
 }
 
+header .container p {
+    color: var(--dark);
+}
+
 header .container img {
     display: none;
 }
@@ -80,7 +84,7 @@ nav {
     padding: 0 100px;
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: var(--clear);
     z-index: 99;
 }
 
@@ -133,7 +137,7 @@ nav ul {
 .about .image-container .line {
     width: calc(70% + 50px);
     height: calc(100% + 50px);
-    border: 1px solid var(--cleargreen);
+    border: 1px solid var(--mediumgreen);
     position: absolute;
     top: -25px;
     left: calc(50% - 70%/2 - 25px);
