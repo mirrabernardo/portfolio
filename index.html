@@ -10,29 +10,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="assents/logo.png">
+    <section id="home">
+        <header>
+            <div class="container">
+                <img src="assents/logoletter.png">
 
-            <h2>Hey,</h2>
-            <h1>I am Mirra Bernardo</h1>
-            <p>An UX Designer and Web Developer Training, passionate about programming and learning a little more every day.</p>
-            <button>Read More</button>
-        </div>
-    </header>
-
+                <h2>Hey,</h2>
+                <h1>I am Mirra</h1>
+                <p>I believe that good designs can connect us to our true essence, making dreams come true through technology.</p>
+                <button onclick="window.location.href='#about'"><i data-feather="more-horizontal"></i><span>read more</span></button>
+            </div>
+        </header>
+    </section>
     <nav>
-        <img src="assents/logo.png">
+        <a href="#home"><img src="assents/logoletter.png"></a>
             <ul>
-                <button><i data-feather="user"></i>About</button>
-                <button><i data-feather="briefcase"></i>Work</button>
-                <button><i data-feather="list"></i>Resume</button>
+                <button onclick="window.location.href='#about'"><i data-feather="user"></i><span>about</span></button>
+                <button onclick="window.location.href='#work'"><i data-feather="briefcase"></i><span>work</span></button>
+                <button onclick="window.location.href='#resume'"><i data-feather="list"></i><span>resume</span></button>
             </ul>
     </nav>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h1>
-                About Me
+                about me
             </h1>
             <p>
                 Hello! Welcome to my portfolio! 
@@ -50,12 +51,40 @@
         <div class="image-container">
             <div class="line fix"></div>
             <div class="line rot"></div>
-            <img src="assents/profile.jpg" alt="Profile Image - Mirra Bernardo">
+            <img src="assents/profile-edit.jpg" alt="Profile Image - Mirra Bernardo">
         </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
 
     </section>
+
+    <section class="resume" id="resume">
+        <h1>resume</h1>
+        <div class="container">
+            <div class="image-container"><img src="assents/resume.png" alt="curriculum"></div>
+        
+            <div class="content">
+                <div class="resume-info">
+                    <span>Name: </span><b>Mirra Bernardo</b>
+                    <span>Age: </span><b>24y</b>
+                    <span>Degree: </span><b>Web Developer in training</b>
+                    <span>Local: </span><b>Brazil, PE</b>
+                    <span>Phone Number: </span><b>+55 (81) 97323-2182</b>
+                    <span>e-mail: </span><b>mirrabernardo@outlook.com</b>
+                    <span>Languages: </span><b>Fluent Portuguese and Intermediate English</b>
+
+                </div>
+                <button class="secundary" onclick="window.location.href='https://google.com'"><i data-feather="save"></i><span>save it</span></button>
+            </div>
+            <h3></h3>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <p>© Mirra Bernardo - 2022</p>
+    </footer>
     <script>
         feather.replace()
     </script>  

@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap');
+
+@font-face{
+    font-family: 'amsterdam-three-slant';
+    src: url("assents/amsterdam-three-slant-ttf.ttf");
+}
 
 body, button, select, input, textarea {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Comfortaa', cursive;
+
     color: var(--dark);
     
 }
@@ -18,8 +24,8 @@ html, body {
 
 :root {
     --dark: #000000;
-    --mediumgreen: #02735E;
-    --lightgreen: #038C73;
+    --medium-orange: #e98431;
+    --light-orange: #fcb42e;
     --clear: #ffffff;
     --menuheight: 65px;
 }
@@ -27,7 +33,9 @@ html, body {
 h1 {
     font-size: 50px;
     margin: 0;
-    color: var(--mediumgreen);
+    color: var(--medium-orange);
+    font-family: amsterdam-three-slant;
+    font-weight: 100;
 }
 
 h2 {
@@ -35,21 +43,27 @@ h2 {
 }
 
 a {
-    color: var(--dark);
+    color: var(--medium-orange);
 }
+
+a:hover {
+    color: var(--light-orange);
+}
+
 button {
-    background: var(--dark);
+    background: var(--medium-orange);
     border: 0;
     border-radius: 20px;
     padding: 10px 35px;
-    color: white;
+    color: var(--clear);
     font-weight: bold;
     letter-spacing: 2px;
+    height: 35px;
 
 }
 
 button:hover {
-    background-color: var(--mediumgreen);
+    background-color: var(--light-orange);
 }
 
 header {
@@ -88,12 +102,26 @@ nav {
     z-index: 99;
 }
 
-nav ul button svg {
+button svg {
+    display: block;
+    height: 18px;
+    width: 18px;
+}
+
+button span {
     display: none;
 }
 
+button:hover svg {
+    display: none;
+}
+
+button:hover span {
+    display: block;
+}
+
 nav img {
-    height: 60px;
+    height: var(--menuheight);
 }
 
 nav ul {
@@ -137,7 +165,7 @@ nav ul {
 .about .image-container .line {
     width: calc(70% + 50px);
     height: calc(100% + 50px);
-    border: 1px solid var(--mediumgreen);
+    border: 1px solid var(--medium-orange);
     position: absolute;
     top: -25px;
     left: calc(50% - 70%/2 - 25px);
@@ -146,7 +174,44 @@ nav ul {
 
 .about .image-container .line.rot {
     transform: rotate(-3.3deg) ;
-    border-color: var(--lightgreen);
+    border-color: var(--light-orange);
+}
+
+.resume {
+    text-align: center;
+    padding: 20px 100px;
+}
+
+.resume .container {
+    display: flex;
+    margin: 40px;
+
+}
+.resume .container img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.resume .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    
+}
+
+.resume .container .content .resume-info {
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-gap: 1rem;
+    margin-bottom: 50px;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
 }
 
 
@@ -238,6 +303,10 @@ nav ul {
     nav ul button svg {
         display: block;
         margin: 0 auto;
+    }
+
+    nav ul button span {
+        display: none;
     }
 
     .about {
