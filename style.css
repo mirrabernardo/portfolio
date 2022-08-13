@@ -44,13 +44,14 @@ h2 {
 
 a {
     color: var(--medium-orange);
+    text-decoration: none;
 }
 
 a:hover {
     color: var(--light-orange);
 }
 
-button {
+.button {
     background: var(--medium-orange);
     border: 0;
     border-radius: 20px;
@@ -62,8 +63,28 @@ button {
 
 }
 
-button:hover {
+.button:hover {
     background-color: var(--light-orange);
+}
+
+.button svg {
+    display: block;
+    height: 18px;
+    width: 18px;
+}
+
+.button span {
+    display: none;
+}
+
+.button:hover svg {
+    display: none;
+}
+
+.button:hover span {
+    display: block;
+    color: var(--clear);
+    font-size: 14px;
 }
 
 header {
@@ -87,8 +108,11 @@ header .container img {
     display: none;
 }
 
-header .container button {
+header .container .button-header {
     margin-top: 30px;
+    display: flex;
+    
+    
 }
 
 nav {
@@ -100,24 +124,6 @@ nav {
     top: 0;
     background-color: var(--clear);
     z-index: 99;
-}
-
-button svg {
-    display: block;
-    height: 18px;
-    width: 18px;
-}
-
-button span {
-    display: none;
-}
-
-button:hover svg {
-    display: none;
-}
-
-button:hover span {
-    display: block;
 }
 
 nav img {
@@ -160,6 +166,7 @@ nav ul {
     width: 70%;
     height: 100%;
     object-fit: cover;
+    
 }
 
 .about .image-container .line {
@@ -187,7 +194,7 @@ nav ul {
     padding: 0px 50px 100px;
     justify-content: space-around;
     max-width: 1080px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .services .services-container .services-card {
@@ -203,6 +210,7 @@ nav ul {
     max-width: 300px;
 
 }
+
 .services .services-container .services-card svg {
     width: 80px;
     height: 80px;
@@ -210,20 +218,80 @@ nav ul {
     color: #e98431;
     
 }
+
+.portfolio {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.portfolio-container {
+    margin: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    justify-items: center;
+}
+
+.card-portfolio {
+    border: 1px solid var(--medium-orange);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.skills-container ul {
+    display: flex;
+    justify-items: center;
+    padding: 0;
+    color: var(--light-orange);
+    margin: 5px;
+    
+}
+.skills-container li {
+    font-size: 11px;
+    display: flex;
+    border: 1px solid var(--light-orange);
+    border-radius: 15px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.card-portfolio .image-container {
+    margin: 25px 0;
+}
+
+.card-portfolio .image-container img {
+    width: 100%;
+}
+
 .resume {
     text-align: center;
-    padding: 60px 100px;
+    padding: 60px;
     margin-bottom: 100px;
 }
 
 .resume .container {
     display: flex;
-    margin: 40px;
-
+    max-width: 1200px;
+    margin: 50px auto;
 }
-.resume .container img {
+
+.resume .container .image-container {
     width: 50%;
-    object-fit: cover;
+    
+    
+}
+
+.resume .container .image-container img {
+    width: 50%;
+    margin-top: 0;
+    min-width: 260px;
 }
 
 .resume .container .content {
@@ -233,14 +301,24 @@ nav ul {
     align-items: center;
     text-align: left;
     width: 100%;
-    
+}
+
+.resume .container .content .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    width: 50%; 
 }
 
 .resume .container .content .resume-info {
     display: grid;
     grid-template-columns: 150px auto;
     grid-gap: 1rem;
-    margin-bottom: 50px;
+    margin-bottom: 50px; 
+}
+
+footer {
+    height: 100px;
 }
 
 footer p {
@@ -286,6 +364,19 @@ footer p {
         height: 380px;
     }
 
+    .resume .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .resume .container .image-container {
+        padding-bottom: 50px;
+    
+    }
+
+
 }
 
 /* tablet response */
@@ -316,12 +407,19 @@ footer p {
         
     }
 
+    .resume .container .image-container {
+        width: 100%;
+    }
 
+    .resume .container .image-container img {
+        min-width: 150px;
+    }
 }
 
 /* phone response */
 
 @media (max-width: 480px) {
+
     header .container {
         padding: 0 40px;
     }
@@ -335,7 +433,7 @@ footer p {
         height: 75px;
     }
 
-    nav button {
+    nav .button {
         height: 50px;
         font-size: 12px;
         padding-bottom: 10px;
@@ -346,12 +444,12 @@ footer p {
         justify-content: space-around;
     }
 
-    nav ul button svg {
+    nav ul .button svg {
         display: block;
         margin: 0 auto;
     }
 
-    nav ul button span {
+    nav ul .button span {
         display: none;
     }
 
@@ -362,4 +460,13 @@ footer p {
     .services {
         padding: 40px;
     }
+
+    .resume {
+        padding: 40px;        
+    }
+
+    .resume .container .content .resume-info {
+        grid-template-columns: auto;
+    }
+
 }
