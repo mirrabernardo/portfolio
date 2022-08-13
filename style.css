@@ -51,6 +51,10 @@ a:hover {
     color: var(--light-orange);
 }
 
+#btn-hidden {
+    cursor: pointer;
+  }
+
 .button {
     background: var(--medium-orange);
     border: 0;
