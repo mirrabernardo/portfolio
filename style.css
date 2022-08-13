@@ -177,9 +177,41 @@ nav ul {
     border-color: var(--light-orange);
 }
 
+.services {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.services-container {
+    display: flex;
+    padding: 0px 50px 100px;
+    justify-content: space-around;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.services .services-container .services-card {
+    border: 1px solid var(--medium-orange);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    max-width: 300px;
+
+}
+.services .services-container .services-card img {
+    width: 100px;
+    margin: 30px 0 5px;
+    
+}
 .resume {
     text-align: center;
-    padding: 20px 100px;
+    padding: 60px 100px;
+    margin-bottom: 100px;
 }
 
 .resume .container {
@@ -215,6 +247,7 @@ footer p {
 }
 
 
+
 /* small desktop response */
 
 @media (max-width: 1000px) {
@@ -238,6 +271,17 @@ footer p {
 
     .about .image-container {
         margin-top: 50px;
+    }
+
+    .services .services-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .services-card {
+        height: 380px;
     }
 
 }
@@ -313,4 +357,7 @@ footer p {
         padding: 40px;
     }
 
+    .services {
+        padding: 40px;
+    }
 }
