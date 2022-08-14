@@ -190,7 +190,7 @@ nav ul {
 
 .services {
     text-align: center;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 
 .services-container {
@@ -225,7 +225,7 @@ nav ul {
 
 .portfolio {
     text-align: center;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 
 .portfolio-container {
@@ -276,7 +276,7 @@ nav ul {
 
 .resume {
     text-align: center;
-    padding: 60px;
+    padding: 50px;
     margin-bottom: 100px;
 }
 
@@ -428,6 +428,10 @@ footer p {
         padding: 0 40px;
     }
 
+    header h1 {
+        font-size: 45px;
+    }
+
     nav {
         position: fixed;
         bottom: 0;
@@ -438,9 +442,18 @@ footer p {
     }
 
     nav .button {
-        height: 50px;
+        height: 40px;
         font-size: 12px;
         padding-bottom: 10px;
+    }
+
+    .button:hover span {
+        display: none;
+    }
+
+    .button:hover svg {
+        display: block;
+        color: var(--clear);
     }
 
     nav ul {
@@ -473,4 +486,7 @@ footer p {
         grid-template-columns: auto;
     }
 
+    .services .services-container .services-card {
+        max-height: 350px;
+    }
 }
