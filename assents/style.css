@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;1,300&display=swap');
+
+@font-face{
+    font-family: 'Red Hat Display', sans-serif;
+    
+}
+
+body, button, select, input, textarea {
+    font-family: 'Red Hat Display', sans-serif;
+
+    color: var(--dark);
+    
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    margin: 0;
+    background-color: var(--clear);
+    letter-spacing: 5px;
+    font-weight: 100;
+}
+
+:root {
+    --dark: #ffffff;
+    --medium-orange: #998081;
+    --light-orange: #9d8287;
+    --clear: #111111;
+    --menuheight: 65px;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+    color: var(--medium-orange);
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+a {
+    color: var(--medium-orange);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--light-orange);
+}
+
+#btn-hidden {
+    cursor: pointer;
+  }
+
+.button {
+    /*background: var(--medium-orange);*/
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 10px;
+    /*color: var(--clear);*/
+    font-weight: bold;
+    /*letter-spacing: 2px;*/
+    height: 35px;
+
+}
+
+.button:hover {
+    background-color: #000;
+}
+
+.button svg {
+    display: block;
+    height: 18px;
+    width: 18px;
+}
+
+.button span {
+    display: none;
+}
+
+.button:hover svg {
+    display: none;
+}
+
+.button:hover span {
+    display: block;
+    color: var(--medium-orange);
+    font-size: 14px;
+}
+
+header {
+    height: calc(100vh - var(--menuheight));
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    height: fit-content;
+    width: 50%;
+    padding: 0 100px;
+
+}
+
+header .container p {
+    color: var(--dark);
+}
+
+header .container img {
+    display: none;
+}
+
+header .container .button-header {
+    margin-top: 30px;
+    display: flex;
+    
+    
+}
+
+nav {
+    display: flex;
+    height: var(--menuheight);
+    justify-content: space-between;
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    z-index: 99;
+}
+
+nav img {
+    height: var(--menuheight);
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 100px;
+    
+}
+
+.about {
+    display: flex;
+    padding: 100px;
+}
+
+.about .container {
+    width: 50%;
+    padding-right: 50px;
+
+}
+
+.about .container .social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30%;
+}
+
+.about .image-container {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.about .image-container img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.about .image-container .line {
+    width: calc(70% + 50px);
+    height: calc(100% + 50px);
+    border: 1px solid var(--medium-orange);
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 70%/2 - 25px);
+
+}
+
+.about .image-container .line.rot {
+    transform: rotate(-3.3deg) ;
+    border-color: var(--light-orange);
+}
+
+.services {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.services-container {
+    display: flex;
+    padding: 0px 50px 100px;
+    justify-content: space-around;
+    max-width: 1080px;
+    margin: 20px auto;
+}
+
+.services .services-container .services-card {
+    border: 1px solid var(--medium-orange);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    max-width: 300px;
+
+}
+
+.services .services-container .services-card svg {
+    width: 80px;
+    height: 80px;
+    margin: 30px 0 5px;
+    color: #998081;
+    
+}
+
+.portfolio {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.portfolio-container {
+    margin: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    justify-items: center;
+}
+
+.card-portfolio {
+    border: 1px solid var(--medium-orange);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.skills-container ul {
+    display: flex;
+    justify-items: center;
+    padding: 0;
+    color: var(--light-orange);
+    margin: 5px;
+    
+}
+.skills-container li {
+    font-size: 11px;
+    display: flex;
+    border: 1px solid var(--light-orange);
+    border-radius: 15px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.card-portfolio .image-container {
+    margin: 25px 0;
+}
+
+.card-portfolio .image-container img {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.resume {
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
+.resume .container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.resume .container .image-container {
+    width: 50%;
+    
+    
+}
+
+.resume .container .image-container img {
+    width: 50%;
+    margin-top: 0;
+    min-width: 260px;
+}
+
+.resume .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+}
+
+.resume .container .content .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    width: 50%; 
+}
+
+.resume .container .content .resume-info {
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-gap: 1rem;
+    margin-bottom: 50px; 
+}
+
+footer {
+    height: 100px;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+/* small desktop response */
+
+@media (max-width: 1000px) {
+    header .container {
+        width: 100%;
+        padding: 70px;
+    }
+
+    .about {
+        flex-direction: column;
+
+    }
+
+    .about .container, .about .image-container {
+        width: 100%;
+    }
+
+    .about .container {
+        padding-right: 0;
+    }
+
+    .about .image-container {
+        margin-top: 50px;
+    }
+
+    .services .services-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .services-card {
+        height: 380px;
+    }
+
+    .resume .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .resume .container .image-container {
+        padding-bottom: 50px;
+    
+    }
+
+
+}
+
+/* tablet response */
+
+@media (max-width: 767px) {
+    
+    header .container, .about {
+        padding: 50px;
+    }
+
+    header .container img {
+        display: inline;
+        height: 70px;
+        margin-bottom: 50px;
+    }
+
+    nav {
+        padding: 0 30px;
+    }
+
+    nav img {
+        display: none;
+    }
+    
+    nav ul {
+        padding: 0;
+        justify-content: space-between;
+        
+    }
+
+    .resume .container .image-container {
+        width: 100%;
+    }
+
+    .resume .container .image-container img {
+        min-width: 150px;
+    }
+}
+
+/* phone response */
+
+@media (max-width: 480px) {
+
+    header .container {
+        padding: 0 40px;
+    }
+
+    header h1 {
+        font-size: 45px;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 0;
+        top: unset;
+        padding: 0 20px;
+        width: 100%;
+        height: 75px;
+    }
+
+    nav .button {
+        height: 40px;
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    .button:hover span {
+        display: none;
+    }
+
+    .button:hover svg {
+        display: block;
+        color: var(--clear);
+    }
+
+    nav ul {
+        padding: 0;
+        justify-content: space-around;
+    }
+
+    nav ul .button svg {
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav ul .button span {
+        display: none;
+    }
+
+    .about {
+        padding: 40px;
+    }
+
+    .services {
+        padding: 40px;
+    }
+
+    .resume {
+        padding: 40px;        
+    }
+
+    .resume .container .content .resume-info {
+        grid-template-columns: auto;
+    }
+
+    .services .services-container .services-card {
+        max-height: 350px;
+    }
+}
