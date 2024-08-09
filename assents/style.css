@@ -6,10 +6,16 @@
     
 }
 
+section {
+    height: 94vh;
+    padding-top: 60px; /* Adiciona espaço entre o topo e o título */
+    box-sizing: border-box; 
+}
+
 body, button, select, input, textarea {
     font-family: 'Red Hat Display', sans-serif;
 
-    color: var(--dark);
+    color: var(--color1);
     
 }
 
@@ -20,39 +26,40 @@ body, button, select, input, textarea {
 
 html, body {
     margin: 0;
-    background-color: var(--clear);
-    letter-spacing: 5px;
+    background-color: var(--color2);
     font-weight: 100;
 }
 
 :root {
-    --dark: #ffffff;
-    --medium-orange: #998081;
-    --light-orange: #9d8287;
-    --clear: #111111;
+    --color1: #d9d9d9;
+    --color-clean: #998081;
+    --color-dark: #9d8287;
+    --color2: #111111;
     --menuheight: 65px;
 }
 
 h1 {
-    font-size: 50px;
+    padding-top: 50px;
+    font-size: 60px;
     margin: 0;
-    color: var(--medium-orange);
+    color: var(--color-clean);
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 100;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 
 h2 {
     font-size: 24px;
+    font-weight: 100;
 }
 
 a {
-    color: var(--medium-orange);
+    color: var(--color-clean);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--light-orange);
+    color: var(--color-dark);
 }
 
 #btn-hidden {
@@ -60,11 +67,11 @@ a:hover {
   }
 
 .button {
-    /*background: var(--medium-orange);*/
+    /*background: var(--color-clean);*/
     border: 0;
     border-radius: 20px;
     padding: 10px 10px;
-    /*color: var(--clear);*/
+    /*color: var(--color2);*/
     font-weight: bold;
     /*letter-spacing: 2px;*/
     height: 35px;
@@ -91,7 +98,7 @@ a:hover {
 
 .button:hover span {
     display: block;
-    color: var(--medium-orange);
+    color: var(--color-clean);
     font-size: 14px;
 }
 
@@ -99,29 +106,35 @@ header {
     height: calc(100vh - var(--menuheight));
     display: flex;
     align-items: center;
+    padding: 0 50px; /* ajuste conforme necessário */
 }
 
 header .container {
-    height: fit-content;
-    width: 50%;
-    padding: 0 100px;
-
+    display: flex;
+    align-items: center;
+    width: 100%; /* garante que a container use toda a largura disponível */
+    justify-content: space-between; /* espaço entre a imagem e o texto */
 }
 
-header .container p {
-    color: var(--dark);
+header .header-logo {
+    max-width: 500px; /* ajuste conforme necessário */
+    height: auto;
+    margin-left: 20px; /* espaço entre a imagem e o texto */
 }
 
-header .container img {
-    display: none;
+header .text-content {
+    max-width: 60%; /* ajusta conforme necessário */
 }
 
-header .container .button-header {
+header .text-content p {
+    color: var(--color1);
+}
+
+header .button-header {
     margin-top: 30px;
     display: flex;
-    
-    
 }
+
 
 nav {
     display: flex;
@@ -146,9 +159,20 @@ nav ul {
     
 }
 
+#contain {
+    display: flex;
+    padding: 50px;
+    
+
+}
+
 .about {
     display: flex;
+    flex-direction: column;
     padding: 100px;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
 .about .container {
@@ -168,6 +192,7 @@ nav ul {
     width: 50%;
     text-align: center;
     position: relative;
+    
 }
 
 .about .image-container img {
@@ -180,7 +205,7 @@ nav ul {
 .about .image-container .line {
     width: calc(70% + 50px);
     height: calc(100% + 50px);
-    border: 1px solid var(--medium-orange);
+    border: 1px solid var(--color-clean);
     position: absolute;
     top: -25px;
     left: calc(50% - 70%/2 - 25px);
@@ -189,7 +214,7 @@ nav ul {
 
 .about .image-container .line.rot {
     transform: rotate(-3.3deg) ;
-    border-color: var(--light-orange);
+    border-color: var(--color-dark);
 }
 
 .services {
@@ -198,15 +223,15 @@ nav ul {
 }
 
 .services-container {
-    display: flex;
-    padding: 0px 50px 100px;
-    justify-content: space-around;
-    max-width: 1080px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 0 50px 100px;
+    max-width: 90%;
     margin: 20px auto;
 }
 
 .services .services-container .services-card {
-    border: 1px solid var(--medium-orange);
+    border: 1px solid var(--color-clean);
     border-radius: 15px;
     margin: 10px;
     padding: 15px;
@@ -216,6 +241,7 @@ nav ul {
     text-align: center;
     align-items: center;
     max-width: 300px;
+    box-sizing: border-box; 
 
 }
 
@@ -240,7 +266,7 @@ nav ul {
 }
 
 .card-portfolio {
-    border: 1px solid var(--medium-orange);
+    border: 1px solid var(--color-clean);
     border-radius: 15px;
     margin: 10px;
     padding: 15px;
@@ -257,14 +283,14 @@ nav ul {
     display: flex;
     justify-items: center;
     padding: 0;
-    color: var(--light-orange);
+    color: var(--color-dark);
     margin: 5px;
     
 }
 .skills-container li {
     font-size: 11px;
     display: flex;
-    border: 1px solid var(--light-orange);
+    border: 1px solid var(--color-dark);
     border-radius: 15px;
     padding: 5px;
     margin: 2px;
@@ -340,10 +366,16 @@ footer p {
 /* small desktop response */
 
 @media (max-width: 1000px) {
+    
+    section {
+        height: auto;
+    }
+    
     header .container {
         width: 100%;
         padding: 70px;
     }
+
 
     .about {
         flex-direction: column;
@@ -359,7 +391,7 @@ footer p {
     }
 
     .about .image-container {
-        margin-top: 50px;
+        margin: 50px 0px;
     }
 
     .services .services-container {
@@ -392,13 +424,15 @@ footer p {
 
 @media (max-width: 767px) {
     
-    header .container, .about {
-        padding: 50px;
+    header .container {
+        padding: 10px;
+        flex-direction: column-reverse;
+
     }
 
     header .container img {
         display: inline;
-        height: 70px;
+        max-height: 300px;
         margin-bottom: 50px;
     }
 
@@ -416,6 +450,13 @@ footer p {
         
     }
 
+    #contain {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+
     .resume .container .image-container {
         width: 100%;
     }
@@ -429,9 +470,20 @@ footer p {
 
 @media (max-width: 480px) {
 
-    header .container {
-        padding: 0 40px;
+    section {
+        height: auto;
     }
+    
+    header {
+        padding: 0;
+    }
+
+    header .container img {
+        display: inline;
+        max-height: 100px;
+        margin-bottom: 50px;
+    }
+
 
     header h1 {
         font-size: 45px;
@@ -458,7 +510,7 @@ footer p {
 
     .button:hover svg {
         display: block;
-        color: var(--clear);
+        color: var(--color2);
     }
 
     nav ul {
